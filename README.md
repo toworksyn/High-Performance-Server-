@@ -12,8 +12,6 @@
 
 - 工作环境：VSCode，Clion
 
-- 单元测试：~~gtest~~
-
 - 版本控制：git
 
 - 代码结构：[Understand](https://scitools.com/) + [callgraph](http://blog.csdn.net/solstice/article/details/488865)
@@ -22,7 +20,7 @@
 
 **Other**
 
-- 自动化构建：[Travis CI](https://travis-ci.org/linw7/TKeed)
+- 自动化构建：[Travis CI](https://travis-ci.org/toworksyn/SYeed---High-Performance-Server/settings)
 
 - 压测工具：[WebBench](https://github.com/EZLippi/WebBench)
 
@@ -60,12 +58,3 @@
 
 - v1.1修改了CPU负载较高问题，修改后1000并发各线程（4worker）CPU使用率10%左右。
 
-**Feature**
-
-- v2.0实现Json解释器解析配置
-
-- v3.0实现FastCGI（功能扩展）
-
-- v4.0实现服务器缓存（性能加速）
-
-- v5.0实现反向代理（安全性及负载均衡）
