@@ -83,7 +83,7 @@ int sy_init_out_t(sy_http_out_t* out, int fd){
     return 0;
 }
 
-void tk_http_handle_header(sy_http_request_t* request, sy_http_out_t* out){
+void sy_http_handle_header(sy_http_request_t* request, sy_http_out_t* out){
     list_head* pos;
     sy_http_header_t* hd;
     sy_http_header_handle_t* header_in;
