@@ -176,7 +176,7 @@ void do_request(void* ptr){
     char* plast = NULL;
     size_t remain_size;
 
-    tk_del_timer(request);
+    sy_del_timer(request);
 
     while(1){
         // plast指向缓冲区buf当前可写入的第一个字节位置，这里取余是为了实现循环缓冲
@@ -193,11 +193,11 @@ void do_request(void* ptr){
             goto err;
 
         // 非EAGAIN错误，断开连接
-        if(n_read < 0 && (errno != TK_AGAIN))
+        if(n_read < 0 && (errno != SY_AGAIN))
             goto err;
 
         // Non-blocking下errno返回EAGAIN则重置定时器（进入此循环表示连接被激活），重新注册，在不断开TCP连接情况下重新等待下一次用户请求
-        if((n_read < 0) && (errno == TK_AGAIN))
+        if((n_read < 0) && (errno == SY_AGAIN))
             break;
 
         // 更新读到的总字节数
@@ -205,14 +205,14 @@ void do_request(void* ptr){
 
         // 解析请求报文行
         rc = sy_http_parse_request_line(request);
-        if(rc == TK_AGAIN)
+        if(rc == SY_AGAIN)
             continue;
         else if(rc != 0)
             goto err;
 
         // 解析请求报文体
         rc = sy_http_parse_request_body(request);
-        if(rc == TK_AGAIN)
+        if(rc == SY_AGAIN)
             continue;
         else if(rc != 0)
             goto err;
