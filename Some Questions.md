@@ -1,4 +1,4 @@
-# SYeed启示录
+# 面试常见问题
 
 1. [C10K问题](https://www.oschina.net/translate/c10k)本质？
 
