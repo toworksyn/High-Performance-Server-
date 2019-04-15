@@ -112,7 +112,7 @@
         
         - 若为平滑关闭，则还需要判断当前就绪队列中task是否为空，不为空则执行完就绪队列中任务再关闭。
 
-12. TKeed高CPU占用问题？
+12. 高CPU占用问题？
 
     - 问题描述：
 
@@ -156,7 +156,7 @@
 
         - 使用tcpdump -i lo可以抓取本地环回数据。
 
-14. TKeed基本信息？
+14. 基本信息？
 
     - 端口号：3000
 
@@ -166,10 +166,3 @@
 
     - 监听最大等待队列：1024
 
-## 推荐阅读
-
-[高性能网络编程 1](http://www.52im.net/thread-560-1-1.html)
-
-[高性能网络编程 2](http://www.cocoachina.com/bbs/read.php?tid-1705273.html)
-
-[如何处理C10K问题](https://www.oschina.net/translate/c10k)
