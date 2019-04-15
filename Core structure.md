@@ -67,7 +67,7 @@ typedef struct priority_queue{
 ```C++
 typedef struct sy_timer{
     size_t key;    // 标记超时时间
-    int deleted;    // 标记是否被删除
+    int deleted;    // 标记是否被删除(惰性删除时鉴定此标志）
     timer_handler_pt handler;    // 超时处理
     sy_http_request_t *request;    // 指向对应的request请求
 } sy_timer_t;
