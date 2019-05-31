@@ -20,7 +20,7 @@
 
 **Other**
 
-- 自动化构建：[Travis CI](https://travis-ci.org/toworksyn/SYeed---High-Performance-Server/settings)
+- 自动化构建：[Travis CI](https://travis-ci.org/toworksyn/High-Performance-Server-/settings)
 
 - 压测工具：[WebBench](https://github.com/EZLippi/WebBench)
 
